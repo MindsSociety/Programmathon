@@ -1,12 +1,11 @@
 cases = int(raw_input())
+
 for c in xrange(cases):
     m, n = map(int, raw_input().split())
     cy = map(int, raw_input().split())
     cx = map(int, raw_input().split())
-
     cy.sort(reverse=True)
     cx.sort(reverse=True)
-
     my = mx = 1
     iy = ix = total = 0
 
@@ -19,4 +18,5 @@ for c in xrange(cases):
             total += cx[ix] * my
             mx += 1
             ix += 1
+
     print total % 1000000007
